@@ -71,7 +71,11 @@ new_hash.each do |season_hash, data_hsh|
      seasons = seasons.join
     puts "#{seasons}:"
   data_hsh.each do |holiday_name_hash, supplies_hsh|
-    holiday_name = holiday_name_hash.to_s.capitalize!
+    holiday_name = holiday_name_hash.to_s.split
+    holiday_name.map do |item|
+        item.capitalize!
+      end
+      holiday_name = holiday_name.join
     supplies = supplies_hsh.join(", ")
     puts "  #{holiday_name}: #{supplies}"
   end
