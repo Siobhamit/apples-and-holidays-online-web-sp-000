@@ -70,8 +70,8 @@ new_hash.each do |season_hash, data_hsh|
      end
      seasons = seasons.join
     puts "#{seasons}:"
-  data.each do |holiday_name_hash, data_hsh|
-    supplies = data_hsh.join(", ")
+  data_hsh.each do |holiday_name_hash, supplies_hsh|
+    supplies = supplies_hsh.join(", ")
     puts "#{holiday_name_hash}: #{supplies}"
   end
 end
